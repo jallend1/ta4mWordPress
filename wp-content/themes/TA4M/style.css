@@ -6,3 +6,148 @@
     Description: There Are Four Mics Theme
     Version: 0.1
  */
+
+:root {
+  --title-font: 'Probert Bold', sans-serif;
+  --heading-font: 'Probert', sans-serif;
+  --episode-font: 'Antonio', 'Lato', sans-serif;
+  --main-font: 'Lato', sans-serif;
+  --bg-color: #242842;
+  --font-color: #f0f0f0;
+  --good-orange: #b58d02;
+  --good-blue: #2a6087;
+  --highlight: #617da6;
+}
+
+@font-face {
+  font-family: 'Probert Bold';
+  src: url('./fonts/probert_bold-webfont.woff2') format('woff2'),
+    url('./fonts/probert_bold-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Probert';
+  src: url('./fonts/probert-webfont.woff2') format('woff2'),
+    url('./fonts/probert-webfont.woff') format('woff');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+/* Typography */
+
+h1,
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+
+h1 {
+  font-family: var(--title-font);
+}
+
+h2 {
+  font-family: var(--heading-font);
+}
+
+p,
+span,
+a,
+li,
+button,
+select,
+textarea,
+input {
+  font-family: var(--main-font);
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+li,
+a {
+  color: var(--font-color);
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero div:last-of-type {
+  flex: 1 1 auto;
+}
+
+.hero .banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin-bottom: 4rem;
+}
+
+.banner {
+  background-image: 'url(/4mics-1920.png)';
+}
+
+.hero .titles {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titles h1 {
+  letter-spacing: 4px;
+  margin: 0;
+  font-size: 4rem;
+}
+
+.titles .separator {
+  display: block;
+  width: 40%;
+  height: 2px;
+  margin-bottom: 0.4rem;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0) 5%,
+    #fff 15%,
+    #fff 80%,
+    rgba(255, 255, 255, 0) 95%
+  );
+}
+
+.titles span {
+  font-family: 'Probert', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  text-align: center;
+}
