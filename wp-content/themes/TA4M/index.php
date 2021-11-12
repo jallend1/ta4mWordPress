@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<main class="post-index">
 <?php 
     while(have_posts()){
         the_post();?>
@@ -24,5 +25,6 @@
             </div>
         </article>
     <?php } ?>
+    </main>
 
 <?php get_footer(); ?>

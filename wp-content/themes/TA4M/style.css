@@ -388,6 +388,17 @@ a {
   width: 90%;
 }
 
+main {
+  animation-name: fadeMeUp;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+  width: 90%;
+
+  margin: 1.2rem auto 0;
+}
+
 /* Posts */
 
 .post {
