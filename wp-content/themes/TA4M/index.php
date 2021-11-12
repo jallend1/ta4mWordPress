@@ -12,7 +12,15 @@
                             <h3><?php the_title(); ?></h3>
                         </a>
                         <div>
-                            <p><?php the_excerpt(); ?>
+                            <p>
+                                <?php
+                                    if(has_excerpt()){
+                                        the_excerpt();
+                                    }
+                                    else{
+                                        echo wp_trim_words(get_the_content(), 20); 
+                                    }
+                                ?>
                             <p>
                                 <a href="<?php the_permalink(); ?>">Continue reading &raquo;</a>
                             </p>
