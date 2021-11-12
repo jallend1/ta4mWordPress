@@ -211,7 +211,7 @@ a {
   margin-top: 0.5rem;
 }
 
-.page-title {
+.menu-item {
   line-height: 40px;
   letter-spacing: 1px;
   margin: 0;
@@ -227,16 +227,28 @@ a {
   text-align: center;
 }
 
-.page-title:after,
-.page-title:before {
+.menu-item:after,
+.menu-item:before {
   content: '';
   display: block;
   width: 60px;
   height: 3px;
 }
 
-.current-page:after,
-.current-page:before {
+.menu-item > a {
+  text-decoration: none;
+}
+
+.menu-item {
+  display: flex;
+}
+/* 
+.menu-item .nav-box {
+  width: 60px;
+} */
+
+.current-menu-item:after,
+.current-menu-item:before {
   content: '';
   display: block;
   width: 60px;

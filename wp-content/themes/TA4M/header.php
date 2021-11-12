@@ -10,21 +10,21 @@
 <header class='header-top'>
       <div>
         <div class='blue-bar x1'>11</div>
-            <h1>
-                <a class="header-title" href="/home">
-                    <?php echo get_bloginfo('name'); ?>
-                </a>
-            </h1>
+        <h1>
+            <a class="header-title" href="/blog">
+                <?php echo get_bloginfo('name'); ?>
+            </a>
+        </h1>
         <div class='blue-bar x3'>28</div>
         <div class='blue-bar x5 hide-me'>61</div>
         <div class='orange-bar x2'>98</div>
         <div class='flavor-text-1 x2'>
-          <span>ESTABLISHING SECURE CONNECTION</span>
-          <span>SECURE CONNECTION ENABLED</span>
-          <span>
-            ...Welcome, &#123;GUEST &#125; to Starfleet Archive Museum
-          </span>
-          <span>...My name is INDEX, how may I assist you today?</span>
+            <span>ESTABLISHING SECURE CONNECTION</span>
+            <span>SECURE CONNECTION ENABLED</span>
+            <span>
+                ...Welcome, &#123;GUEST &#125; to Starfleet Archive Museum
+            </span>
+            <span>...My name is INDEX, how may I assist you today?</span>
         </div>
         <div class='blue-bar x1'>71</div>
       </div>
@@ -32,5 +32,36 @@
         <div class='blue-bar x8'></div>
         <div class='orange-bar x2'></div>
         <div class='blue-bar x4'></div>
-      </div>
-    </header>
+    </div>
+</header>
+<nav class='header-bottom'>
+    <?php wp_nav_menu(array(
+        'theme_location' => 'headerMenu',
+        'after' => '<div class="orange-bar x1 nav-box"></div>')); ?>
+    <!-- <div class='orange-bar x1 hide-me'>67</div>
+    
+    <div class='orange-bar x1'>72</div>
+    
+    <div class='orange-bar x1'>47</div>
+    
+    <div class='orange-bar x1'>01</div>
+    
+    <div class='orange-bar x9'>13</div> -->
+</nav>
+
+<?php 
+    $menuLocations = get_nav_menu_locations();
+    $menuID = $menuLocations['headerMenu'];
+    $menuItems = wp_get_nav_menu_items($menuID); 
+
+    ?>
+<nav class="mp__menu">
+    <?php foreach ( $menuItems as $menuItem ){ ?>
+        <!-- <li>
+            <a href="'.$menuItemItem->url.'" title="'.$menuItem->title.'"><?php echo $menuItem->title ?></a>
+        </li> -->
+        
+    <?php } ?>
+        
+        
+    </nav>

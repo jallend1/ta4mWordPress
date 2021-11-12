@@ -13,7 +13,7 @@
                         <div>
                             <p><?php the_excerpt(); ?>
                             <p>
-                                <a href="<?php echo the_permalink(); ?>">Continue reading &raquo;</a>
+                                <a href="<?php the_permalink(); ?>">Continue reading &raquo;</a>
                             </p>
                         </div>
                     </div>
