@@ -35,33 +35,13 @@
     </div>
 </header>
 <nav class='header-bottom'>
+    <div class="orange-bar lcars-fixed">85</div>    
     <?php wp_nav_menu(array(
         'theme_location' => 'headerMenu',
-        'after' => '<div class="orange-bar x1 nav-box"></div>')); ?>
-    <!-- <div class='orange-bar x1 hide-me'>67</div>
-    
+        'after' => '<div class="orange-bar x1"></div>')); ?>
+    <div class='orange-bar x1 hide-me'>67</div>
     <div class='orange-bar x1'>72</div>
-    
     <div class='orange-bar x1'>47</div>
-    
     <div class='orange-bar x1'>01</div>
-    
-    <div class='orange-bar x9'>13</div> -->
+    <div class='orange-bar x9'>13</div>
 </nav>
-
-<?php 
-    $menuLocations = get_nav_menu_locations();
-    $menuID = $menuLocations['headerMenu'];
-    $menuItems = wp_get_nav_menu_items($menuID); 
-
-    ?>
-<nav class="mp__menu">
-    <?php foreach ( $menuItems as $menuItem ){ ?>
-        <!-- <li>
-            <a href="'.$menuItemItem->url.'" title="'.$menuItem->title.'"><?php echo $menuItem->title ?></a>
-        </li> -->
-        
-    <?php } ?>
-        
-        
-    </nav>
