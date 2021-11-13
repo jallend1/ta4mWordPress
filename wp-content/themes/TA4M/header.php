@@ -35,7 +35,7 @@
     </div>
 </header>
 <nav class='header-bottom'>
-    <div class="orange-bar lcars-fixed">85</div>    
+    <div class="orange-bar x7 lcars-fixed">85</div>    
     <?php wp_nav_menu(array(
         'theme_location' => 'headerMenu',
         'after' => '<div class="orange-bar x1"></div>')); ?>
