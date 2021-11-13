@@ -64,8 +64,6 @@ class TA4M_Logo_Widget extends WP_Widget{
         <?php
             echo $args['after_widget'];
     }
-
-    
 }
 
 function register_ta4m_logo_widget(){

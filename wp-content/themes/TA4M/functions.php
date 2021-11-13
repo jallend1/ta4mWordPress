@@ -21,9 +21,6 @@ function ta4m_sidebars(){
     ));
 }
 
-
-
-
 add_action('wp_enqueue_scripts', 'ta4m_custom_styles');
 add_action('after_setup_theme', 'ta4m_features');
 add_action('widgets_init', 'ta4m_sidebars');
