@@ -4,7 +4,7 @@
 wp-content/*
 !wp-content/plugins
 wp-content/plugins/*
-!wp-content/plugins/logo-widget.php
+!wp-content/plugins/logo-widget
 !wp-content/mu-plugins
 wp-content/themes/*
 !wp-content/themes/TA4M
