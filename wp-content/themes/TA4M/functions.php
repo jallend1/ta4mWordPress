@@ -10,19 +10,19 @@ function ta4m_features(){
     register_nav_menu('headerMenu', 'Main Header Menu');
 }
 
-function ta4m_sidebars(){
-    register_sidebar(array(
-        'name' => __('Left Sidebar', 'TA4M'),
-        'id' => 'left',
-        'before_widget' => '<div id="%1$s" class="widget %2$s>',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
-    ));
-}
+// function ta4m_sidebars(){
+//     register_sidebar(array(
+//         'name' => __('Left Sidebar', 'TA4M'),
+//         'id' => 'left',
+//         'before_widget' => '<div id="%1$s" class="widget %2$s>',
+//         'after_widget' => '</div>',
+//         'before_title' => '<h3 class="widget-title">',
+//         'after_title' => '</h3>'
+//     ));
+// }
 
 add_action('wp_enqueue_scripts', 'ta4m_custom_styles');
 add_action('after_setup_theme', 'ta4m_features');
-add_action('widgets_init', 'ta4m_sidebars');
+// add_action('widgets_init', 'ta4m_sidebars');
 
 ?>
