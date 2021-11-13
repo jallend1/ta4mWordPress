@@ -36,12 +36,13 @@
 </header>
 <nav class='header-bottom'>
     <div class="orange-bar x7 lcars-fixed">85</div>    
+    <!-- TODO: Generates the SAME random number for each div -->
     <?php wp_nav_menu(array(
         'theme_location' => 'headerMenu',
-        'after' => '<div class="orange-bar x1"></div>')); ?>
+        'after' => '<div class="orange-bar jason-workaround">' . rand(9, 98) . '</div>')); ?>
     <div class='orange-bar x1 hide-me'>67</div>
-    <div class='orange-bar x1'>72</div>
+    <!-- <div class='orange-bar x1'>72</div>
     <div class='orange-bar x1'>47</div>
-    <div class='orange-bar x1'>01</div>
+    <div class='orange-bar x1'>01</div> -->
     <div class='orange-bar x9'>13</div>
 </nav>

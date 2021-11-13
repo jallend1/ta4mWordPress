@@ -354,6 +354,11 @@ a {
   width: 20%;
 }
 
+.jason-workaround {
+  width: 60px;
+  margin: 0 1.25em;
+}
+
 .x3 {
   width: 30%;
 }
