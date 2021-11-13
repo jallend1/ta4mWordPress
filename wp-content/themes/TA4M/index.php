@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
 <main class="post-index">
+    <?php get_sidebar( 'left' ); ?>
+    <?php the_widget('Logo_Widget'); ?>
 <?php 
     while(have_posts()){
         the_post();?>
@@ -15,7 +17,7 @@
                             <p>
                                 <?php
                                     if(has_excerpt()){
-                                        the_excerpt();
+                                        echo get_the_excerpt();
                                     }
                                     else{
                                         echo wp_trim_words(get_the_content(), 20); 
