@@ -20,6 +20,13 @@
                         endif;
                     ?>
                 </div>
+                <!-- Previous / Next Post Navigation -->
+                <?php
+                    the_post_navigation(array(
+                        'next_text' => '<span class="meta-nav" aria-hidden="true">Next article: </span> <span class="post-title">%title</span>',
+                        'prev_text' => '<span class="meta-nav" aria-hidden="true">Previous article: </span><span class="post-title">%title</span>',
+                    ));
+                    ?>
             </article>
         <?php } ?>
     </main>

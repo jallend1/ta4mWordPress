@@ -533,6 +533,16 @@ main {
   font-family: var(--main-font);
 }
 
+.post-navigation {
+  margin: 2em;
+}
+
+.post-navigation .nav-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.25em;
+}
+
 /* sidebar */
 
 .sidebar {
