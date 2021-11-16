@@ -4,8 +4,12 @@
     <?php get_template_part('./inc/template-sidebar'); ?>
     <main class="post-index">
         <div class='archive-head'>
-            <h2><?php the_archive_title(); ?></h2>
-            <div><?php the_archive_description(); ?></div>
+            <?php if(is_category()){ ?>
+                <h2><?php single_cat_title(); ?></h2>
+            <?php } 
+            else{ ?>
+                <h2><?php the_archive_title(); ?></h2>
+            <?php } ?>
         </div>
         <div>
         <?php while(have_posts()){
