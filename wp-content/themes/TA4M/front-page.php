@@ -9,7 +9,7 @@
         <span class='separator'></span>
         <span>A Star Trek Podcast</span>
     </div>
-    <div className='read-more'>
+    <div class='enter-site'>
         <a href="/blog">Enter Site</a>
     </div>
 </main>

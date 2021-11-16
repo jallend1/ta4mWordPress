@@ -152,6 +152,19 @@ a {
   text-align: center;
 }
 
+.enter-site a {
+  text-decoration: none;
+  border-top: solid 2px transparent;
+  border-bottom: solid 2px transparent;
+  transition: border-color 1s;
+  padding: 10px;
+}
+
+.enter-site a:hover {
+  border-top: solid 2px var(--font-color);
+  border-bottom: solid 2px var(--font-color);
+}
+
 /* lcars header */
 
 .header-title {
