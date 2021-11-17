@@ -10,6 +10,13 @@ function ta4m_features(){
     register_nav_menu('headerMenu', 'Main Header Menu');
 }
 
+function get_ta4m_posts_page_URL() {
+    if('page' === get_option( 'show_on_front')){
+        return get_permalink(get_option('page_for_posts'));
+    }
+    return get_home_url();
+}
+
 // function ta4m_sidebars(){
 //     register_sidebar(array(
 //         'name' => __('Left Sidebar', 'TA4M'),

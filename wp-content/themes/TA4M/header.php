@@ -11,7 +11,7 @@
       <div>
         <div class='blue-bar x1'>11</div>
         <h1>
-            <a class="header-title" href="/blog">
+            <a class="header-title" href="<?php echo get_ta4m_posts_page_URL(); ?> ">
                 <?php echo get_bloginfo('name'); ?>
             </a>
         </h1>

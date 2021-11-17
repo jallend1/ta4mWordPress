@@ -10,6 +10,6 @@
         <span>A Star Trek Podcast</span>
     </div>
     <div class='enter-site'>
-        <a href="/blog">Enter Site</a>
+        <a href="<?php echo get_ta4m_posts_page_URL(); ?>">Enter Site</a>
     </div>
 </main>
