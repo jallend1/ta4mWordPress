@@ -556,6 +556,19 @@ main {
   column-gap: 1.25em;
 }
 
+.post-tags {
+  padding: 1em 0;
+}
+
+/* The actual tags */
+.post-tags a[rel='tag'] {
+  text-decoration: none;
+  font-size: 0.75em;
+  padding: 0.25em;
+  border-radius: 5px;
+  background-color: var(--good-orange);
+}
+
 /* sidebar */
 
 .sidebar {

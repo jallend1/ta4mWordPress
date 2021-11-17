@@ -14,24 +14,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="post-meta">
+                    <div class="post-tags">
+                        <?php echo the_tags(''); ?>
+                    </div>
+                    <div>
+                        Posted by: <?php the_author(); ?> on <?php the_time(); ?>
+                    </div>
+                    <?php
+                        the_post_navigation(array(
+                            'next_text' => '<span class="meta-nav" aria-hidden="true">Next article: </span> <span class="post-title">%title</span>',
+                            'prev_text' => '<span class="meta-nav" aria-hidden="true">Previous article: </span><span class="post-title">%title</span>',
+                        ));
+                    ?>
+                    <div>
             </article>
             <?php } ?>
         </main>
-        <div class="post-meta">
-            <div class="post-tags">
-                <?php echo the_tags(); ?>
-            </div>
-            <div>
-                Posted by: <?php the_author(); ?> on <?php the_time(); ?>
-            </div>
-            <!-- Previous / Next Post Navigation -->
-            <?php
-                the_post_navigation(array(
-                    'next_text' => '<span class="meta-nav" aria-hidden="true">Next article: </span> <span class="post-title">%title</span>',
-                    'prev_text' => '<span class="meta-nav" aria-hidden="true">Previous article: </span><span class="post-title">%title</span>',
-                ));
-            ?>
-            <div>
                 <?php 
                     if(comments_open() || get_comments_number()) : comments_template(); 
                     endif;
