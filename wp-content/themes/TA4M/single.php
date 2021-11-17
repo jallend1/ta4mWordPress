@@ -19,7 +19,15 @@
                         <?php echo the_tags(''); ?>
                     </div>
                     <div>
-                        Posted by: <?php the_author(); ?> on <?php the_time(); ?>
+                        <?php 
+                            $year = get_post_time('Y');
+                            $month = get_post_time('m');
+                            $day = get_post_time('j');
+                        ?>
+                        Posted by: <?php the_author(); ?> on 
+                        <a href="<?php echo get_month_link($year, $month); ?>"/> <?php echo $month; ?></a>
+                        <a href="<?php echo get_day_link($year, $month, $day); ?>"/> <?php echo $day; ?></a>
+                        <a href="<?php echo get_year_link($year); ?>"/><?php echo $year; ?></a>
                     </div>
                     <?php
                         the_post_navigation(array(
