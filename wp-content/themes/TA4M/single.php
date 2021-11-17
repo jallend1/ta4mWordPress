@@ -24,7 +24,15 @@
                             $month = get_post_time('m');
                             $day = get_post_time('j');
                         ?>
-                        Posted by: <?php the_author(); ?> on 
+                        <?php 
+                            // There Are Four Mics doesn't have a first name and is also useless as a tag, so only display author if there's an actual author
+                            if(the_author_meta('first_name')){
+                                echo 'Posted by:' . the_author_meta('first_name') . ' on '; 
+                            }
+                            else{
+                                echo 'Posted on ';
+                            }
+                        ?>
                         <a href="<?php echo get_month_link($year, $month); ?>"/> <?php echo $month; ?></a>
                         <a href="<?php echo get_day_link($year, $month, $day); ?>"/> <?php echo $day; ?></a>
                         <a href="<?php echo get_year_link($year); ?>"/><?php echo $year; ?></a>
