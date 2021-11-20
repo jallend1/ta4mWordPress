@@ -9,7 +9,7 @@
             <h2><?php the_field('title'); ?></h2>
             <div>
                 <?php the_field('blurb'); ?>
-                <!-- <?php the_content(); ?> -->
+                <?php the_content(); ?>
             </div>
         <?php } ?>
     </main>
