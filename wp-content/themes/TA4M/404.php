@@ -4,7 +4,7 @@
         <?php get_template_part('./inc/template-sidebar'); ?>
     </div>
     <div>
-        <h2>Oh no! We can't find that page!</h2>
+        <h2>Definitely going to put an LCARS menu (white and red) here saying 404</h2>
     </div>
 </div>
 
