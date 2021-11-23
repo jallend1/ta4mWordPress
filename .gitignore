@@ -5,6 +5,7 @@ wp-content/*
 !wp-content/plugins
 wp-content/plugins/*
 !wp-content/plugins/logo-widget
+!wp-content/plugins/ta4m-custom-block
 !wp-content/mu-plugins
 !wp-content/themes/
 wp-content/themes/twentytwentyone
