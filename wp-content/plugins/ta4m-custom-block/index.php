@@ -17,7 +17,7 @@ class TA4MCustomBlock{
     }
 
     function adminAssets(){
-        wp_enqueue_script('ta4mcustomblock', plugin_dir_url(__FILE__) . 'test.js', array('wp-blocks'));
+        wp_enqueue_script('ta4mcustomblock', plugin_dir_url(__FILE__) . '/build/index.js', array('wp-blocks'));
     }
 
 }

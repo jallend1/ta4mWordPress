@@ -3,7 +3,9 @@ wp.blocks.registerBlockType("ourplugin/ta4m-custom-block", {
     icon: "smiley",
     category: "common",
     edit: function () {
-        return wp.element.createElement('h1', null, 'It works!!')
+        return (
+            <h3>This an H3 from JSX!</h3>
+        )
     },
     save: function () {
         return wp.element.createElement('h1', null, 'Howdy from the save function!')
