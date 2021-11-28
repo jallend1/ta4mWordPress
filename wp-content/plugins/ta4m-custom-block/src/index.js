@@ -32,27 +32,6 @@ wp.blocks.registerBlockType('ourplugin/ta4m-custom-block', {
     );
   },
   save: function (props) {
-    return (
-      <div>
-        Host: {props.attributes.hostName}
-        Badge Color: {props.attributes.badgeColor}
-      </div>
-    );
-  },
-  deprecated: [
-    {
-      attributes: {
-        badgeColor: { type: 'string' },
-        hostName: { type: 'string' }
-      },
-      save: function (props) {
-        return (
-          <div>
-            Host Name: {props.attributes.hostName}
-            Badge Color: {props.attributes.badgeColor}
-          </div>
-        );
-      }
-    }
-  ]
+    return null;
+  }
 });
