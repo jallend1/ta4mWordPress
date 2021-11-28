@@ -29,7 +29,6 @@ class TA4MCustomBlock{
         <p>Host: <?php echo esc_html($attributes['hostName']) ?></p>
         <p>Uniform Color: <?php echo esc_html($attributes['badgeColor']) ?></p>
         <?php return ob_get_clean();
-
     }
 
 }
