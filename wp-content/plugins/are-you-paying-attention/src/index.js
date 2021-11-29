@@ -8,7 +8,7 @@ import {
   Icon
 } from '@wordpress/components';
 
-const ourStartFunction = () => {
+(function () {
   let locked = false;
   wp.data.subscribe(() => {
     const results = wp.data
@@ -28,9 +28,9 @@ const ourStartFunction = () => {
       wp.data.dispatch('core/editor').unlockPostSaving('noanswer');
     }
   });
-};
+})();
 
-ourStartFunction();
+// ourStartFunction();
 
 wp.blocks.registerBlockType('ourplugin/are-you-paying-attention', {
   title: 'Are You Paying Attention?',
