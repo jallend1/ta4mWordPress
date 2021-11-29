@@ -8,6 +8,9 @@ wp-content/plugins/*
 !wp-content/plugins/ta4m-custom-block
 wp-content/plugins/ta4m-custom-block/node_modules
 wp-content/plugins/ta4m-custom-block/build/
+!wp-content/plugins/are-you-paying-attention/
+wp-content/plugins/are-you-paying-attention/node_modules
+wp-content/plugins/are-you-paying-attention/build
 !wp-content/mu-plugins
 !wp-content/themes/
 wp-content/themes/twentytwentyone
