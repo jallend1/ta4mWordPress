@@ -14,7 +14,8 @@ wp.blocks.registerBlockType('ourplugin/are-you-paying-attention', {
   category: 'common',
   attributes: {
     question: { type: 'string' },
-    answers: { type: 'array', default: [''] }
+    answers: { type: 'array', default: [''] },
+    correctAnswer: { type: 'number', default: undefined }
   },
   edit: EditComponent,
   save: function (props) {
@@ -32,6 +33,10 @@ function EditComponent(props) {
       (answer, index) => index != indexToDelete
     );
     props.setAttributes({ answers: newAnswers });
+  };
+
+  const markAsCorrect = (indexToMarkCorrect) => {
+    props.setAttributes({ correctAnswer: indexToMarkCorrect });
   };
 
   return (
@@ -57,8 +62,15 @@ function EditComponent(props) {
             />
           </FlexBlock>
           <FlexItem>
-            <Button>
-              <Icon icon='star-empty' className='mark-as-correct' />
+            <Button onClick={() => markAsCorrect(index)}>
+              <Icon
+                className='mark-as-correct'
+                icon={
+                  props.attributes.correctAnswer === index
+                    ? 'star-filled'
+                    : 'star-empty'
+                }
+              />
             </Button>
           </FlexItem>
           <FlexItem>
