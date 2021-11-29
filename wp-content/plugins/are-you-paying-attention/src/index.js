@@ -8,6 +8,30 @@ import {
   Icon
 } from '@wordpress/components';
 
+const ourStartFunction = () => {
+  let locked = false;
+  wp.data.subscribe(() => {
+    const results = wp.data
+      .select('core/block-editor')
+      .getBlocks()
+      .filter(
+        (block) =>
+          block.name === 'ourplugin/are-you-paying-attention' &&
+          block.attributes.correctAnswer === undefined
+      );
+    if (results.length && locked === false) {
+      locked = true;
+      wp.data.dispatch('core/editor').lockPostSaving('noanswer');
+    }
+    if (!results.length && locked) {
+      locked = false;
+      wp.data.dispatch('core/editor').unlockPostSaving('noanswer');
+    }
+  });
+};
+
+ourStartFunction();
+
 wp.blocks.registerBlockType('ourplugin/are-you-paying-attention', {
   title: 'Are You Paying Attention?',
   icon: 'smiley',
@@ -33,6 +57,9 @@ function EditComponent(props) {
       (answer, index) => index != indexToDelete
     );
     props.setAttributes({ answers: newAnswers });
+    if (indexToDelete === props.attributes.correctAnswer) {
+      props.setAttributes({ correctAnswer: undefined });
+    }
   };
 
   const markAsCorrect = (indexToMarkCorrect) => {
