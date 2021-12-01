@@ -25,9 +25,20 @@ class TA4MCustomBlock{
     }
 
     function theHTML($attributes){
+        if(!is_admin()){
+            wp_enqueue_script('ta4mFrontend', plugin_dir_url(__FILE__) . 'build/frontend.js', array('wp-element'));
+            wp_enqueue_style('ta4mFrontendStyles', plugin_dir_url(__FILE__) . 'build/frontend.css');
+        }
         ob_start(); ?>
-        <p>Host: <?php echo esc_html($attributes['hostName']) ?></p>
-        <p>Uniform Color: <?php echo esc_html($attributes['badgeColor']) ?></p>
+        <div class="profile">
+            <div class="uniform">
+                <img src="<?php echo plugin_dir_url(__FILE__) ?>public/images/<?php echo $attributes['badgeColor'] ?>.png">
+            </div>
+            <div class="bio">
+                <h3><?php echo $attributes['hostName'] ?></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum provident doloremque quaerat explicabo id unde omnis modi eveniet ducimus consequatur, commodi odit quas dolorum sequi voluptatibus reiciendis ipsam sed aspernatur sit tempore quae saepe harum. Impedit quaerat minus obcaecati! Laboriosam natus, error ab illo magni eum beatae officia aut? Maiores.</p>
+            </div>
+        </div>
         <?php return ob_get_clean();
     }
 
