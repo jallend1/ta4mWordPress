@@ -36,7 +36,7 @@ class TA4MCustomBlock{
             </div>
             <div class="bio">
                 <h3><?php echo $attributes['hostName'] ?></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum provident doloremque quaerat explicabo id unde omnis modi eveniet ducimus consequatur, commodi odit quas dolorum sequi voluptatibus reiciendis ipsam sed aspernatur sit tempore quae saepe harum. Impedit quaerat minus obcaecati! Laboriosam natus, error ab illo magni eum beatae officia aut? Maiores.</p>
+                <p><?php echo $attributes['bio'] ?></p>
             </div>
         </div>
         <?php return ob_get_clean();

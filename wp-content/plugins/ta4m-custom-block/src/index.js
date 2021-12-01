@@ -4,7 +4,8 @@ wp.blocks.registerBlockType('ourplugin/ta4m-custom-block', {
   category: 'common',
   attributes: {
     badgeColor: { type: 'string' },
-    hostName: { type: 'string' }
+    hostName: { type: 'string' },
+    bio: { type: 'string' }
   },
   edit: function (props) {
     function updateBadgeColor(e) {
@@ -21,19 +22,23 @@ wp.blocks.registerBlockType('ourplugin/ta4m-custom-block', {
 
     return (
       <div>
-        <h2>Active Crew</h2>
         <input
           type='text'
           placeholder='Host Name'
           value={props.attributes.hostName}
           onChange={updateHostName}
         />
-        <input
-          type='text'
-          placeholder='Badge Color'
+        <label for='uniform-color'>Uniform:</label>
+        <select
+          name='uniform-color'
+          id='uniform-color'
           value={props.attributes.badgeColor}
           onChange={updateBadgeColor}
-        />
+        >
+          <option value='red'>Red</option>
+          <option value='yellow'>Yellow</option>
+          <option value='blue'>Blue</option>
+        </select>
         <input
           type='text'
           placeholder='Bio'
