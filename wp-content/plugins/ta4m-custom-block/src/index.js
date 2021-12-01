@@ -11,11 +11,23 @@ wp.blocks.registerBlockType('ourplugin/ta4m-custom-block', {
       props.setAttributes({ badgeColor: e.target.value });
     }
 
+    const updateBio = (e) => {
+      props.setAttributes({ bio: e.target.value });
+    };
+
     function updateHostName(e) {
       props.setAttributes({ hostName: e.target.value });
     }
+
     return (
       <div>
+        <h2>Active Crew</h2>
+        <input
+          type='text'
+          placeholder='Host Name'
+          value={props.attributes.hostName}
+          onChange={updateHostName}
+        />
         <input
           type='text'
           placeholder='Badge Color'
@@ -24,9 +36,9 @@ wp.blocks.registerBlockType('ourplugin/ta4m-custom-block', {
         />
         <input
           type='text'
-          placeholder='Host Name'
-          value={props.attributes.hostName}
-          onChange={updateHostName}
+          placeholder='Bio'
+          value={props.attributes.bio}
+          onChange={updateBio}
         />
       </div>
     );
