@@ -30,8 +30,10 @@ class TA4MCustomBlock{
             wp_enqueue_style('ta4mFrontendStyles', plugin_dir_url(__FILE__) . 'build/frontend.css');
         }
         ob_start(); ?>
-        <div class="ta4m-frontend-to-update">is this here</div>
-        <div class="profile">
+        <div class="ta4m-frontend-to-update">
+            <pre><?php echo wp_json_encode($attributes); ?></pre>
+        </div>
+        <!-- <div class="profile">
             <div class="uniform">
                 <img src="<?php echo plugin_dir_url(__FILE__) ?>public/images/<?php echo $attributes['badgeColor'] ?>.png">
             </div>
@@ -39,7 +41,7 @@ class TA4MCustomBlock{
                 <h3><?php echo $attributes['hostName'] ?></h3>
                 <p><?php echo $attributes['bio'] ?></p>
             </div>
-        </div>
+        </div> -->
         <?php return ob_get_clean();
     }
 
