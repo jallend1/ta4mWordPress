@@ -30,6 +30,7 @@ class TA4MCustomBlock{
             wp_enqueue_style('ta4mFrontendStyles', plugin_dir_url(__FILE__) . 'build/frontend.css');
         }
         ob_start(); ?>
+        <div class="ta4m-frontend-to-update">is this here</div>
         <div class="profile">
             <div class="uniform">
                 <img src="<?php echo plugin_dir_url(__FILE__) ?>public/images/<?php echo $attributes['badgeColor'] ?>.png">
