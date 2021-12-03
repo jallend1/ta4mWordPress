@@ -31,7 +31,7 @@ class TA4MCustomBlock{
         }
         ob_start(); ?>
         <div class="ta4m-frontend-to-update">
-            <pre><?php echo wp_json_encode($attributes); ?></pre>
+            <pre style="display: none;"><?php echo wp_json_encode($attributes); ?></pre>
         </div>
         <?php return ob_get_clean();
     }
