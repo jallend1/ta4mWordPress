@@ -19,7 +19,12 @@ hostsToUpdate.forEach((host, index) => {
 
 function PodcastHost(props) {
   return (
-    <div className='crew'>
+    <div
+      className='crew'
+      style={{
+        animationDelay: `${(props.index + 1) * 125}ms`
+      }}
+    >
       <div className='uniform'>
         <img src={shirts[props.badgeColor]} />
       </div>
