@@ -19,7 +19,7 @@ hostsToUpdate.forEach((host) => {
 
 function PodcastHost(props) {
   return (
-    <div className='profile'>
+    <div className='crew'>
       <div className='uniform'>
         <img src={shirts[props.badgeColor]} />
       </div>

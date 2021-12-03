@@ -1,8 +1,26 @@
-.profile {
+@keyframes fadeMeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.crew {
   display: grid;
   grid-template-columns: 200px minmax(200px, 600px);
   column-gap: 2em;
   padding: 1.5em 0;
+}
+
+.crew {
+  animation-name: fadeMeLeft;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .uniform img {
