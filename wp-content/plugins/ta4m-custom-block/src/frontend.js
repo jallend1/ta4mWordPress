@@ -12,9 +12,9 @@ const shirts = {
 };
 
 const hostsToUpdate = document.querySelectorAll('.ta4m-frontend-to-update');
-hostsToUpdate.forEach((host) => {
+hostsToUpdate.forEach((host, index) => {
   const data = JSON.parse(host.querySelector('pre').innerHTML);
-  ReactDOM.render(<PodcastHost {...data} />, host);
+  ReactDOM.render(<PodcastHost {...data} index={index} />, host);
 });
 
 function PodcastHost(props) {
