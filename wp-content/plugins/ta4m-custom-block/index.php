@@ -33,15 +33,6 @@ class TA4MCustomBlock{
         <div class="ta4m-frontend-to-update">
             <pre><?php echo wp_json_encode($attributes); ?></pre>
         </div>
-        <!-- <div class="profile">
-            <div class="uniform">
-                <img src="<?php echo plugin_dir_url(__FILE__) ?>public/images/<?php echo $attributes['badgeColor'] ?>.png">
-            </div>
-            <div class="bio">
-                <h3><?php echo $attributes['hostName'] ?></h3>
-                <p><?php echo $attributes['bio'] ?></p>
-            </div>
-        </div> -->
         <?php return ob_get_clean();
     }
 

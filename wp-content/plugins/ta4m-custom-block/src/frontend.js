@@ -1,6 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './frontend.scss';
+import blueShirt from './images/blue.png';
+import redShirt from './images/red.png';
+import yellowShirt from './images/yellow.png';
+
+const shirts = {
+  red: redShirt,
+  blue: blueShirt,
+  yellow: yellowShirt
+};
 
 const hostsToUpdate = document.querySelectorAll('.ta4m-frontend-to-update');
 hostsToUpdate.forEach((host) => {
@@ -10,16 +19,14 @@ hostsToUpdate.forEach((host) => {
 
 function PodcastHost(props) {
   return (
-    <div class='profile'>
-      <div class='uniform'>
-        <img src={`images/${props.badgeColor}.png`} />
-        <img src='../public/images/red.png' />
+    <div className='profile'>
+      <div className='uniform'>
+        <img src={shirts[props.badgeColor]} />
       </div>
-      <div class='bio'>
+      <div className='bio'>
         <h3>{props.hostName}</h3>
-        <p>{props.bio}</p>
+        <p className='spacious-text'>{props.bio}</p>
       </div>
-      <h1>{props.badgeColor}</h1>
     </div>
   );
 }
