@@ -18,7 +18,8 @@
                     <div class="post-tags">
                         <?php echo the_tags(''); ?>
                     </div>
-                    <div>
+                    <div class="date-details">
+                        <p>
                         <?php 
                             $year = get_post_time('Y');
                             $month = get_post_time('m');
@@ -33,9 +34,10 @@
                                 echo 'Posted on ';
                             }
                         ?>
-                        <a href="<?php echo get_month_link($year, $month); ?>"/> <?php echo $month; ?></a>
-                        <a href="<?php echo get_day_link($year, $month, $day); ?>"/> <?php echo $day; ?></a>
-                        <a href="<?php echo get_year_link($year); ?>"/><?php echo $year; ?></a>
+                        <a href="<?php echo get_month_link($year, $month); ?>"/> <?php echo get_the_date('F'); ?></a>
+                        <a href="<?php echo get_day_link($year, $month, $day); ?>"/> <?php echo get_the_date('jS,'); ?></a>
+                        <a href="<?php echo get_year_link($year); ?>"/><?php echo get_the_date('Y'); ?></a>
+                        </p>
                     </div>
                     <?php
                         the_post_navigation(array(
