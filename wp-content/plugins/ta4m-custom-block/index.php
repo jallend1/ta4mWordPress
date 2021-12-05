@@ -18,6 +18,8 @@ class TA4MCustomBlock{
 
     function adminAssets(){
         wp_register_script('ta4mcustomblock', plugin_dir_url(__FILE__) . '/build/index.js', array('wp-blocks'));
+        wp_register_style('ta4m-editor-styles', plugin_dir_url( __FILE__ ) . '/build/index.css', array('wp-edit-blocks'));
+        // wp_register_style('ta4m-editor-styles', plugins_url('index.css', __FILE__), array('wp-edit-blocks'));
         register_block_type('ourplugin/ta4m-custom-block', array(
             'editor_script' => 'ta4mcustomblock',
             'render_callback' => array($this, 'theHTML')

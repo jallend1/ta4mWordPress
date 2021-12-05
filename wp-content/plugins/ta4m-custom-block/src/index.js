@@ -1,7 +1,10 @@
+import './index.scss';
+
 wp.blocks.registerBlockType('ourplugin/ta4m-custom-block', {
   title: 'TA4M Custom Block',
   icon: 'smiley',
   category: 'common',
+  editor_style: 'ta4m-editor-styles',
   attributes: {
     badgeColor: { type: 'string' },
     hostName: { type: 'string' },
@@ -21,7 +24,7 @@ wp.blocks.registerBlockType('ourplugin/ta4m-custom-block', {
     }
 
     return (
-      <div>
+      <div className='ta4m-bio-details-inputs'>
         <input
           type='text'
           placeholder='Host Name'
