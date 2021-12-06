@@ -34,8 +34,9 @@
         <div class='blue-bar x4'></div>
     </div>
 </header>
+<div class="container">
+    <div class="orange-bar lcars-fixed">85</div>    
 <nav class='header-bottom'>
-    <div class="orange-bar x7 lcars-fixed">85</div>    
     <!-- TODO: Generates the SAME random number for each div -->
     <?php wp_nav_menu(array(
         'theme_location' => 'headerMenu',
@@ -45,4 +46,5 @@
     <div class='orange-bar x1'>47</div>
     <div class='orange-bar x1'>01</div> -->
     <div class='orange-bar x9'>13</div>
+</div>
 </nav>

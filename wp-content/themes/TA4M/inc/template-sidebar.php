@@ -9,6 +9,6 @@
         <a href="https://itunes.apple.com/us/podcast/there-are-four-mics-a-star-trek-podcast/id1167277814?mt=2&at=1010lxKy">Rate us on iTunes</a>
     </div>
     <div class="disco">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/DiscoNight.png">
-        <p>Like us? Or, more likely, like Star Trek Discovery? Check out our Star Trek Discovery podcast: Disco Night</p>
+        <a href="https://disconightpodcast.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/DiscoNight.png"></a>
+        <p>Like us? Or, more likely, like Star Trek Discovery? Check out <a href="https://disconightpodcast.com/">Disco Night: A Star Trek Discovery Podcast</a></p>
 </aside>
