@@ -238,14 +238,6 @@ a {
   text-align: center;
 }
 
-/* .menu-item:after,
-.menu-item:before {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-} */
-
 .menu-item > a {
   text-decoration: none;
 }
@@ -258,7 +250,6 @@ a {
 .current-menu-item a:before {
   content: '';
   display: block;
-  /* width: 60px; */
   height: 3px;
   background-color: var(--good-orange);
   box-shadow: 0 0 8px #bfb02c73;
@@ -564,6 +555,9 @@ main {
   padding: 1em 0;
 }
 
+.post-comments {
+}
+
 /* The actual tags */
 .post-tags a[rel='tag'] {
   text-decoration: none;
@@ -625,14 +619,4 @@ main {
 footer {
   text-align: center;
   color: var(--font-color);
-}
-
-/* About Plugin */
-
-.crew h3 {
-  font-family: var(--main-font);
-  font-weight: 100;
-  letter-spacing: 1px;
-  font-size: 2rem;
-  margin: 0;
 }

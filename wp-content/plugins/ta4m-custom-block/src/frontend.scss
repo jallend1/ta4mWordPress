@@ -19,6 +19,14 @@
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+
+  h3 {
+    font-family: var(--main-font);
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    margin: 0;
+  }
 }
 
 .uniform img {

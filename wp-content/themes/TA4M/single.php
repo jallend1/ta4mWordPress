@@ -45,16 +45,16 @@
                             'prev_text' => '<span class="meta-nav" aria-hidden="true">Previous article: </span><span class="post-title">%title</span>',
                         ));
                     ?>
-                    <div>
+                </div>
+                <div>
+                    <?php 
+                        if(comments_open() || get_comments_number()) : comments_template(); 
+                        endif;
+                    ?>
+                </div>
             </article>
-            <?php } ?>
-        </main>
-                <?php 
-                    if(comments_open() || get_comments_number()) : comments_template(); 
-                    endif;
-                ?>
-            </div>
-        </div>
+        <?php } ?>
+    </main>
 </div>
 
 <?php get_footer(); ?>
