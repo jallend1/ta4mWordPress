@@ -1,7 +1,16 @@
 .ta4m-bio-details-inputs {
-  //   display: grid;
-  //   grid-template-columns: 1fr 1fr 2fr;
-  display: flex;
-  flex-direction: column;
-  background-color: green;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.uniform-input {
+  text-align: center;
+
+  select {
+    min-height: 40px;
+  }
+
+  label {
+    padding-right: 1.22em;
+  }
 }

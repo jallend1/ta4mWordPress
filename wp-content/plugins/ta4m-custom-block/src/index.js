@@ -31,23 +31,26 @@ wp.blocks.registerBlockType('ourplugin/ta4m-custom-block', {
           value={props.attributes.hostName}
           onChange={updateHostName}
         />
-        <label for='uniform-color'>Uniform:</label>
-        <select
-          name='uniform-color'
-          id='uniform-color'
-          value={props.attributes.badgeColor}
-          onChange={updateBadgeColor}
-        >
-          <option value='red'>Red</option>
-          <option value='yellow'>Yellow</option>
-          <option value='blue'>Blue</option>
-        </select>
-        <input
+        <div class='uniform-input'>
+          <label for='uniform-color'>Uniform:</label>
+          <select
+            name='uniform-color'
+            id='uniform-color'
+            value={props.attributes.badgeColor}
+            onChange={updateBadgeColor}
+          >
+            <option value='red'>Red</option>
+            <option value='yellow'>Yellow</option>
+            <option value='blue'>Blue</option>
+          </select>
+        </div>
+        {/* <input
           type='text'
           placeholder='Bio'
           value={props.attributes.bio}
           onChange={updateBio}
-        />
+        /> */}
+        <textarea value={props.attributes.bio} onChange={updateBio}></textarea>
       </div>
     );
   },
