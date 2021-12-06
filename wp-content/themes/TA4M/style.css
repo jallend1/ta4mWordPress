@@ -225,10 +225,10 @@ a {
 }
 
 .menu-item {
+  display: flex;
   line-height: 40px;
   letter-spacing: 1px;
   margin: 0;
-  display: block;
   font-family: var(--main-font);
   font-weight: normal;
   text-shadow: 0 0 6px #1ca3f15b;
@@ -240,10 +240,7 @@ a {
 
 .menu-item > a {
   text-decoration: none;
-}
-
-.menu-item {
-  display: flex;
+  padding: 0 1.2em;
 }
 
 .current-menu-item a:after,
@@ -350,17 +347,17 @@ a {
   margin: 0 0.3rem;
 }
 
+.jason-workaround {
+  min-width: 60px;
+  line-height: normal;
+}
+
 .x1 {
   width: 10%;
 }
 
 .x2 {
   width: 20%;
-}
-
-.jason-workaround {
-  width: 60px;
-  margin: 0 1.25em;
 }
 
 .x3 {
