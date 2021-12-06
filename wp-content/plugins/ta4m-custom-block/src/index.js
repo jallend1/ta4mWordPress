@@ -30,8 +30,9 @@ wp.blocks.registerBlockType('ourplugin/ta4m-custom-block', {
           placeholder='Host Name'
           value={props.attributes.hostName}
           onChange={updateHostName}
+          className='host-name'
         />
-        <div class='uniform-input'>
+        <div className='uniform-input'>
           <label for='uniform-color'>Uniform:</label>
           <select
             name='uniform-color'

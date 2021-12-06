@@ -3,14 +3,18 @@
   grid-template-columns: 1fr 1fr 2fr;
 }
 
+input {
+  height: 40px;
+}
+
 .uniform-input {
   text-align: center;
-
-  select {
-    min-height: 40px;
-  }
 
   label {
     padding-right: 1.22em;
   }
+}
+
+textarea {
+  height: 150px;
 }
