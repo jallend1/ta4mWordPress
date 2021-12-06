@@ -41,8 +41,8 @@
                     </div>
                     <?php
                         the_post_navigation(array(
-                            'next_text' => '<span class="meta-nav" aria-hidden="true">Next article: </span> <span class="post-title">%title</span>',
-                            'prev_text' => '<span class="meta-nav" aria-hidden="true">Previous article: </span><span class="post-title">%title</span>',
+                            'next_text' => '<span class="meta-nav" aria-hidden="true">Next post: </span> <span class="post-title">%title</span><span> &rarr;</span>',
+                            'prev_text' => '<span class="meta-nav" aria-hidden="true">&larr; Previous post: </span><span class="post-title">%title</span>',
                         ));
                     ?>
                 </div>
