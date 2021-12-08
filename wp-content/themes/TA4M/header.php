@@ -29,10 +29,10 @@
         <div class='blue-bar x1'>71</div>
       </div>
       <div class='narrow-bar'>
-        <div class='blue-bar x8'></div>
-        <div class='orange-bar x2'></div>
-        <div class='blue-bar x4'></div>
-    </div>
+          <div class='blue-bar x8'></div>
+          <div class='orange-bar x2'></div>
+          <div class='blue-bar x4'></div>
+        </div>
 </header>
 <div class="container">
     <div class="orange-bar lcars-fixed">85</div>    

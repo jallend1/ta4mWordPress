@@ -627,6 +627,17 @@ main {
 
 /* 404 Page */
 
+.page-not-found {
+  background-color: #011111;
+  border: 1px solid var(--good-red);
+  margin: 2em auto;
+  padding: 2em;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .lcars-404 {
   display: flex;
 }
@@ -640,6 +651,10 @@ main {
   color: var(--good-red);
   font-size: 3em;
   text-align: center;
+}
+
+.error-text a {
+  text-decoration: none;
 }
 
 footer {

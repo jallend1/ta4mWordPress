@@ -13,7 +13,6 @@ function ta4m_custom_styles(){
 }
 
 function ta4m_features(){
-    add_theme_support('admin-bar', array( 'callback' => '__return_false'));
     add_theme_support('title-tag');
     register_nav_menu('headerMenu', 'Main Header Menu');
 }
@@ -21,5 +20,5 @@ function ta4m_features(){
 
 add_action('wp_enqueue_scripts', 'ta4m_custom_styles');
 add_action('after_setup_theme', 'ta4m_features');
-
+add_filter('show_admin_bar', '__return_false');
 ?>
