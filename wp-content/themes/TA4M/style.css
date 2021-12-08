@@ -170,6 +170,42 @@ a {
   border-bottom: solid 2px var(--font-color);
 }
 
+/* Hero Page Player */
+
+.fake-player {
+  display: flex;
+  align-items: center;
+  border: 1px solid #39437c;
+  background-color: #2d3250;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 7px;
+}
+
+.fake-play {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 25px solid white;
+  border-right: 0;
+  margin-right: 25px;
+  background-color: transparent;
+}
+
+.fake-play:active {
+  border-left: 25px solid rgba(255, 255, 255, 0.24);
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 0;
+}
+
+.fake-progress {
+  background-color: white;
+  height: 2px;
+  margin-top: 0.58rem;
+}
+
 /* lcars header */
 
 .header-title {
