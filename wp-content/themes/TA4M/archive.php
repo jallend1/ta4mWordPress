@@ -4,7 +4,8 @@
     <?php get_template_part('./inc/template-sidebar'); ?>
     <main class="post-index">
         <div class='archive-head'>
-            <?php if(is_category()){ ?>
+            <!-- TODO - Custom category head for author? Leave date the only one on auto? -->
+        <?php if(is_category()){ ?>
                 <h2><?php single_cat_title(); ?></h2>
             <?php } 
             else{ ?>
