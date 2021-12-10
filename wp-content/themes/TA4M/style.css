@@ -157,6 +157,10 @@ a {
   text-align: center;
 }
 
+.enter-site {
+  margin: 2em;
+}
+
 .enter-site a {
   text-decoration: none;
   border-top: solid 2px transparent;
