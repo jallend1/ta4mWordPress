@@ -18,7 +18,7 @@
     <div class="fake-player">
         <button class="fake-play"></button>
         <span class="fake-title">Star Trek Enterprise 03x14 - Stratagem (TAFM 071)</span>
-        <audio controls>
+        <audio>
             <source src="https://traffic.libsyn.com/secure/therearefourmics/TAFM_071_-_Star_Trek_Enterprise_03x14_-_Stratagem.mp3" />
         </audio>
     </div>
